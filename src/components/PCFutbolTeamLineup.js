@@ -1,4 +1,5 @@
 import "./PCFutbolPlayer.js";
+import { shuffle } from "../modules/shuffle.js";
 
 class PCFutbolTeamLineup extends HTMLElement {
   constructor() {
@@ -71,9 +72,26 @@ class PCFutbolTeamLineup extends HTMLElement {
     this.playerNumerate();
   }
 
+  getFreePositions() {
+    const players = [...this.shadowRoot.querySelectorAll("pcfutbol-player")];
+    const freePositions = players
+      .filter(player => player.name === "")
+      .map(player => Number(player.number));
+    return shuffle(freePositions);
+  }
+
   setPlayer(index, data) {
     const players = this.shadowRoot.querySelectorAll("pcfutbol-player");
     players[index - 1].setData(data);
+
+    const elements = [...this.shadowRoot.querySelectorAll("pcfutbol-player")]
+      .filter(player => player.average > 0)
+      .map(player => player.average);
+
+    const average = ~~(elements.reduce((first, second) => first + second) / elements.length);
+    const detail = { team: (this.classList.item(0) === "team-a" ? "local" : "visitante"), average };
+    const event = new CustomEvent("UPDATE_TEAM_AVERAGE", { detail, composed: true, bubbles: true });
+    this.dispatchEvent(event);
   }
 
   playerNumerate() {

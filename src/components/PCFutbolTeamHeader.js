@@ -87,6 +87,7 @@ class PCFutbolTeamHeader extends HTMLElement {
         background: gold;
         width: var(--value, 100%);
         height: 100%;
+        transition: width 0.5s;
       }
     `;
   }
@@ -96,6 +97,19 @@ class PCFutbolTeamHeader extends HTMLElement {
     this.image = `logos/${this.name}.svg`;
     this.type = this.getAttribute("type") || "local";
     this.render();
+    document.addEventListener("UPDATE_TEAM_AVERAGE", (ev) => {
+      const { team, average } = ev.detail;
+
+      if (team === this.type) {
+        this.updateAverageTeam(average);
+      }
+    });
+  }
+
+  updateAverageTeam(value) {
+    console.log("update", value);
+    this.shadowRoot.querySelector("output").textContent = value;
+    this.shadowRoot.querySelector(".bar").style.setProperty("--value", `${value}%`);
   }
 
   render() {
@@ -108,14 +122,14 @@ class PCFutbolTeamHeader extends HTMLElement {
 
       <div class="data">
         <div class="group">
-          <div class="name">${this.name}</div>
+          <div class="name">${this.name.replace("-", " ")}</div>
           <div class="team">${this.type}</div>
         </div>
         <div class="stats">
           MEDIA EQUIPO
-          <output>83</output>
+          <output>0</output>
           <div class="meter">
-            <div class="bar" style="--value: 83%"></div>
+            <div class="bar" style="--value: 0%"></div>
           </div>
         </div>
       </div>

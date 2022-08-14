@@ -1,79 +1,58 @@
+import { chooseTeam } from "./modules/chooseTeam.js";
 import "./components/PCFutbolScreen.js";
 
-const [teamA, teamB] = document.querySelector("pcfutbol-screen").shadowRoot.querySelectorAll("pcfutbol-team-lineup");
+const CHANNEL = "ManzDev";
 
-const PLAYERS = [
-  "cybermanzdev",
-  "manzdev",
-  "maxi83c",
-  "juliokrack27",
-  "commanderroot",
-  "ullacasa",
-  "devgeer",
-  "billxanthi",
-  "hdmc6",
-  "streamlabs",
-  "kugram",
-  "boamorte55",
-  "srcarlosa",
-  "dynaterra",
-  "alopezciotta",
-  "olandaeta",
-  "a1t0rmenta",
-  "eltaladros",
-  "scemigdio",
-  "m_akali",
-  "erika_fnbr",
-  "ferchoo17",
-  "rogueg1rl",
-  "locura_78",
-  "aguzbruno",
-  "maikolmyers77",
-  "zerobytes_",
-  "adeptw",
-  "tizcloud",
-  "elmoliiii",
-  "jamsmendez",
-  "dolce_nyx",
-  "luismac09",
-  "wpfid5555",
-  "kaxips06",
-  "jelitter",
-  "itsthefrits",
-  "lanarayyyy",
-  "virgoproz",
-  "midsooooooooon",
-  "itzemmaaaaaaa",
-  "shompys",
-  "jordandiaz1988",
-  "infraavalorado",
-  "kbemon",
-  "leannpiano",
-  "gallowtown",
-  "chuvv1",
-  "itsvodoo",
-  "javi_more_music",
-  "frankkdrebin",
-  "anotherttvviewer",
-  "esgameplayer",
-  "baikin_lol",
-  "ele_eme_esther",
-  "miottotv",
-  "pablorocha",
-  "patatokill",
-  "ldp_20",
-  "brayanli_",
-  "justoserrano",
-  "devkaos",
-  "spiketrapclair",
-  "misterybrk",
-  "z3thii"
-].sort(() => Math.random() - 0.5);
+const playersList = new Set();
 
-for (let i = 0; i < 11; i++) {
-  teamA.setPlayer(i + 1, { name: PLAYERS[i] });
-}
+const teams = document.querySelector("pcfutbol-screen").shadowRoot.querySelectorAll("pcfutbol-team-lineup");
 
-for (let i = 0; i < 11; i++) {
-  teamB.setPlayer(i + 1, { name: PLAYERS[11 + i] });
-}
+const client = new window.tmi.Client({
+  channels: [CHANNEL]
+});
+
+client.connect();
+
+const getDemarcation = (number) => {
+  if (number === 1) return "POR";
+  if ((number > 1 && number < 4)) return "DEF";
+  if ((number > 3 && number < 9)) return "MED";
+  if ((number > 8)) return "DEL";
+};
+
+const addPlayer = (username) => {
+  if (!playersList.has(username)) {
+    const homeTeam = teams[0].getFreePositions();
+    const visitorTeam = teams[1].getFreePositions();
+    console.log({ username, homeTeam, visitorTeam });
+    const isHomeFull = homeTeam.length === 0;
+    const isVisitorFull = visitorTeam.length === 0;
+    playersList.add(username);
+
+    const isReady = isHomeFull && isVisitorFull;
+
+    if (isReady) {
+      console.log("Lo siento, los equipos ya están llenos.");
+      return;
+    }
+
+    const choosedTeam = chooseTeam(isHomeFull, isVisitorFull);
+    const choosedPosition = (choosedTeam === 0 ? homeTeam.pop() : visitorTeam.pop());
+    console.log({ choosedPosition });
+    const demarcation = getDemarcation(choosedPosition);
+    teams[choosedTeam].setPlayer(choosedPosition, { name: username, demarcation });
+
+    if (isHomeFull && isVisitorFull) {
+      // Iniciar partido
+    }
+  }
+};
+
+document.addEventListener("UPDATE_TEAM_AVERAGE", (ev) => console.log(ev.detail));
+
+client.on("message", (channel, tags, message, self) => {
+  const { username } = tags;
+  const isCommand = message.toLowerCase().startsWith("!jugar");
+
+  isCommand && addPlayer(username);
+});

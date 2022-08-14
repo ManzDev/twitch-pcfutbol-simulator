@@ -1,8 +1,18 @@
+import { shuffle } from "../modules/shuffle.js";
 import "./PCFutbolHeader.js";
 import "./PCFutbolTeamLineup.js";
 import "./PCFutbolTeamHeader.js";
 import "./PCFutbolStadium.js";
 import "./PCFutbolButton.js";
+
+const TEAMS_AVAILABLE = [
+  "angular", "c", "go", "java",
+  "jquery", "php", "react",
+  "rust", "vue", "svelte",
+  "javascript", "ruby", "python",
+  "excel", "cpp", "csharp", "lisp",
+  "internet-explorer"
+];
 
 class PCFutbolScreen extends HTMLElement {
   constructor() {
@@ -47,7 +57,14 @@ class PCFutbolScreen extends HTMLElement {
   }
 
   connectedCallback() {
+    this.selectTeams();
     this.render();
+  }
+
+  selectTeams() {
+    const teams = shuffle(TEAMS_AVAILABLE);
+    this.homeTeam = teams.pop();
+    this.visitorTeam = teams.pop();
   }
 
   render() {
@@ -62,9 +79,9 @@ class PCFutbolScreen extends HTMLElement {
           <pcfutbol-team-lineup class="team-b"></pcfutbol-team-lineup>
         </div>
         <div class="teams">
-          <pcfutbol-team-header name="react"></pcfutbol-team-header>
+          <pcfutbol-team-header name="${this.homeTeam}"></pcfutbol-team-header>
           <pcfutbol-stadium></pcfutbol-stadium>
-          <pcfutbol-team-header name="vue" type="visitante"></pcfutbol-team-header>
+          <pcfutbol-team-header name="${this.visitorTeam}" type="visitante"></pcfutbol-team-header>
         </div>
       </div>
 

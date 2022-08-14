@@ -1,5 +1,5 @@
 {
-  "name": "twitch-pcfutbol",
+  "name": "twitch-pcfutbol-simulator",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -27,5 +27,8 @@
     "vite": "^2.8.0"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
 }
