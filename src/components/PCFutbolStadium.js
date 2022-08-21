@@ -179,7 +179,7 @@ class PCFutbolStadium extends HTMLElement {
   connectedCallback() {
     this.render();
 
-    setTimeout(() => this.setLineup(), 4000);
+    // setTimeout(() => this.setLineup(), 4000);
   }
 
   /*

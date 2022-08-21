@@ -14,12 +14,14 @@ specifiers:
   postcss-nesting: ^10.1.2
   postcss-styled: ^0.34.0
   postcss-syntax: ^0.36.2
+  snarkdown: ^2.0.0
   stylelint: ^14.5.0
   stylelint-config-standard: ^25.0.0
   tmi.js: ^1.8.5
   vite: ^2.8.0
 
 dependencies:
+  snarkdown: 2.0.0
   tmi.js: 1.8.5
 
 devDependencies:
@@ -2428,6 +2430,10 @@ packages:
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
     dev: true
+
+  /snarkdown/2.0.0:
+    resolution: {integrity: sha512-MgL/7k/AZdXCTJiNgrO7chgDqaB9FGM/1Tvlcenenb7div6obaDATzs16JhFyHHBGodHT3B7RzRc5qk8pFhg3A==}
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

@@ -29,6 +29,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "snarkdown": "^2.0.0",
     "tmi.js": "^1.8.5"
   }
 }

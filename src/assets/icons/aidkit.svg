@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with sK1/UniConvertor (http://sk1project.org/) -->
+
+<svg
+   width="512pt"
+   height="512pt"
+   viewBox="0 0 511.99999 512"
+   fill-rule="evenodd"
+   version="1.1"
+   id="svg11568"
+   sodipodi:docname="aidkit.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11572" />
+  <sodipodi:namedview
+     id="namedview11570"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.42050377"
+     inkscape:cx="-26.1591"
+     inkscape:cy="539.82869"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11568" />
+  <circle
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:65.7767;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+     id="path15476"
+     cx="256.51013"
+     cy="258.57733"
+     r="241.67441" />
+  <path
+     id="rect16102"
+     style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:57.8834;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+     d="m 204.89123,114.04193 v 92.9165 h -92.9165 v 103.23926 h 92.9165 v 92.91504 h 103.23926 v -92.91504 h 92.91504 V 206.95843 h -92.91504 v -92.9165 z" />
+</svg>

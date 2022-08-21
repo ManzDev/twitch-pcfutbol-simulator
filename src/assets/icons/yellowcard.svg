@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="450.16989" height="478.26294" id="svg2385" sodipodi:version="0.32"
+  inkscape:version="1.2 (dc2aedaf03, 2022-05-15)" version="1.0" sodipodi:docname="yellowcard.svg"
+  inkscape:output_extension="org.inkscape.output.svg.inkscape" style="enable-background:new"
+  inkscape:export-filename="/media/daten/artwork/fuszball/soccer_ball.png" inkscape:export-xdpi="89.970001"
+  inkscape:export-ydpi="89.970001" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 512 512">
+  <defs id="defs2387">
+    <linearGradient inkscape:collect="always" id="linearGradient8983">
+      <stop style="stop-color:#ffea13;stop-opacity:1;" offset="0" id="stop8979" />
+      <stop style="stop-color:#d8c400;stop-opacity:1;" offset="0.38729817" id="stop9074" />
+      <stop style="stop-color:#d8c400;stop-opacity:1;" offset="1" id="stop8981" />
+    </linearGradient>
+    <linearGradient id="linearGradient3423">
+      <stop style="stop-color:#6a6a6a;stop-opacity:1;" offset="0" id="stop3425" />
+      <stop style="stop-color:#000000;stop-opacity:1;" offset="1" id="stop3427" />
+    </linearGradient>
+    <linearGradient id="linearGradient3413">
+      <stop style="stop-color:#ffffff;stop-opacity:1;" offset="0" id="stop3415" />
+      <stop id="stop3512" offset="0.47019866" style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop style="stop-color:#d6d6d6;stop-opacity:1;" offset="1" id="stop3417" />
+    </linearGradient>
+    <linearGradient id="linearGradient3536">
+      <stop style="stop-color:#333333;stop-opacity:1;" offset="0" id="stop3538" />
+      <stop style="stop-color:#000000;stop-opacity:0;" offset="1" id="stop3540" />
+    </linearGradient>
+    <linearGradient inkscape:collect="always" xlink:href="#linearGradient8983" id="linearGradient8985" x1="354.2977"
+      y1="463.39844" x2="588.94714" y2="761.81134" gradientUnits="userSpaceOnUse"
+      gradientTransform="matrix(0.95234648,0,0,0.95234648,14.091265,15.279997)" />
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter9827" x="-0.11120795"
+      y="-0.070272512" width="1.2224159" height="1.140545">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="12.172887" id="feGaussianBlur9829" />
+    </filter>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0"
+    inkscape:pageshadow="2" inkscape:zoom="0.3920742" inkscape:cx="28.055914" inkscape:cy="650.38709"
+    inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" inkscape:window-width="1280"
+    inkscape:window-height="975" inkscape:window-x="0" inkscape:window-y="24" height="449.16989px" width="450.17px"
+    inkscape:showpageshadow="2" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"
+    inkscape:window-maximized="0" />
+  <metadata id="metadata2390">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Ebene 1" inkscape:groupmode="layer" id="layer1" transform="translate(-236.97296,-366.478)">
+    <rect
+      style="mix-blend-mode:normal;fill:#000000;fill-opacity:0.5425;stroke:none;stroke-width:8;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;filter:url(#filter9827);stop-color:#000000"
+      id="rect9823" width="262.70538" height="415.73764" x="324.03961" y="399.83713" ry="45.909676"
+      transform="matrix(0.95234648,0,0,0.95234648,38.049435,29.661454)" />
+    <rect
+      style="fill:url(#linearGradient8985);fill-opacity:1;stroke:none;stroke-width:7.61877;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke;stop-color:#000000"
+      id="rect8502" width="250.18654" height="395.92627" x="336.93143" y="398.29996" ry="43.721916" />
+  </g>
+</svg>

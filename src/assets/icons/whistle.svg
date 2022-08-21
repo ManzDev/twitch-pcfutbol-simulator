@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.0"
+   width="720"
+   height="448"
+   viewBox="-160 -74 720 448"
+   id="Layer_1"
+   xml:space="preserve"
+   sodipodi:docname="whistle.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview18"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="1.489975"
+   inkscape:cx="270.47434"
+   inkscape:cy="191.94953"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" /><defs
+   id="defs32" />
+<title
+   id="title3">whistle d.aoi</title>
+<polygon
+   points="412,374 394.676,362.719 378,348 370.729,312.527 366,274 365,263 364,251 358.427,241.67 352,235 66,134 74,142 81,150 83,161 86,172 96,208 105,243 126,257 147,271 412,374 "
+   id="polygon5"
+   style="fill:#323232;fill-opacity:1" />
+<polyline
+   fill="#AB1420"
+   points="469.144,-56.04 459,-49 447.732,-34.936 439,-18 432.074,2.024 427,22 424.694,40.57 425,60   428.138,71.57 434,84 443,87 451,90 462.583,84.036 471,76 482.266,61.729 490,47 497.848,28.268 502,10 504.244,-8.801 504,-27   500.964,-40.293 496,-53 488.826,-58.008 480,-61 469.144,-56.04 "
+   id="polyline7"
+   style="fill:#777777;fill-opacity:1" />
+<polygon
+   points="443,87 451,90 384,69 377.783,57.792 375,45 374.01,26.3 376,7 380.736,-12.41 388,-32 396.482,-47.511 408,-62 418.297,-68.998 429,-74 480,-61 469.144,-56.04 459,-49 447.732,-34.936 439,-18 432.074,2.024 427,22 424.694,40.57 425,60 428.138,71.57 434,84 443,87 "
+   id="polygon9"
+   style="fill:#4d4d4d;fill-opacity:1" />
+<polygon
+   points="-160,120 149,237 153,369 -146,242 "
+   id="polygon11"
+   style="fill:#9a9a9a;fill-opacity:1" />
+<polygon
+   points="142.532,353.69 -136.729,235.072 -148.196,135.165 139.207,243.986 142.532,353.69 "
+   id="polygon13"
+   style="fill:#2f2f2f;fill-opacity:1" />
+<polygon
+   points="479.642,-28.976 474,-30 467.34,-27.5 462,-23 455.366,-14.706 450,-4 446,7 443,19 440.932,31.22 441,42 443.065,49.919 447,57 451.429,60.088 457,61 463.567,57.956 469,53 476.032,44.014 480,35 484,23 487,12 488.826,1.204 489,-10 487,-18 484,-26 479.642,-28.976 "
+   id="polygon15"
+   style="fill:#292929;fill-opacity:1" />
+<polygon
+   points="-160,120 145,-32 196,-57 223.832,-60.162 250,-61 528,14 504.74,15.968 481,22 435,52 149,237 -160,120 "
+   id="polygon17"
+   style="fill:#777777;fill-opacity:1" />
+<polyline
+   fill="#AB011E"
+   points="153,369 330,239 341.04,235.929 352,235 358.427,241.67 364,251 365,263 366,274 370.729,312.527   378,348 394.676,362.719 412,374 437.651,366.987 460,353 486.039,324.339 507,293 525.406,253.152 542,213 552.307,170.317   560,125 559.689,88.633 556,53 544.107,31.88 528,14 504.74,15.968 481,22 149,237 153,369 "
+   id="polyline19"
+   style="fill:#515151;fill-opacity:1" />
+<polygon
+   points="348,87 82,6 178,-42 437,32 348,87 "
+   id="polygon21"
+   style="fill:#525252;fill-opacity:1" />
+<path
+   id="path23"
+   style="fill:#c1001f" />
+<polygon
+   points="174.045,-28.429 420.733,42.053 437,32 178,-42 174.045,-28.429 "
+   id="polygon25"
+   style="fill:#9a9a9a;fill-opacity:1" />
+<polygon
+   points="174.045,-28.429 99.274,11.26 82,6 178,-42 174.045,-28.429 "
+   id="polygon27"
+   style="fill:#515151;fill-opacity:1;stroke:none" />
+<polygon
+   points="348,87 99.274,11.26 174.045,-28.429 420.733,42.053 "
+   id="polygon29"
+   style="fill:#2f2f2f;fill-opacity:1" />
+</svg>

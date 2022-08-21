@@ -4,13 +4,14 @@ import "./PCFutbolTeamLineup.js";
 import "./PCFutbolTeamHeader.js";
 import "./PCFutbolStadium.js";
 import "./PCFutbolButton.js";
+import "./PCFutbolSimulation.js";
 
 const TEAMS_AVAILABLE = [
-  "angular", "c", "go", "java",
+  "angular", "cpp", "go", "java",
   "jquery", "php", "react",
   "rust", "vue", "svelte",
   "javascript", "ruby", "python",
-  "excel", "cpp", "csharp", "lisp",
+  "excel", "csharp", "lisp",
   "internet-explorer"
 ];
 
@@ -53,12 +54,21 @@ class PCFutbolScreen extends HTMLElement {
         bottom: 20px;
         right: 20px;
       }
+
+      pcfutbol-simulation {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     `;
   }
 
   connectedCallback() {
     this.selectTeams();
     this.render();
+    const pcfutbolSimulation = document.createElement("pcfutbol-simulation");
+    const screen = this.shadowRoot.querySelector(".screen");
+    screen.appendChild(pcfutbolSimulation);
   }
 
   selectTeams() {
