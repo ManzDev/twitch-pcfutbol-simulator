@@ -94,6 +94,12 @@ class PCFutbolTeamLineup extends HTMLElement {
     this.dispatchEvent(event);
   }
 
+  getDataPlayers() {
+    const container = this.shadowRoot.querySelector(".players");
+    const players = [...container.querySelectorAll("pcfutbol-player")];
+    return players.map(({ number, name, stats, average, demarcation }) => ({ number, name, stats, average, demarcation }));
+  }
+
   playerNumerate() {
     this.shadowRoot.querySelectorAll("pcfutbol-player")
       .forEach((player, index) => {

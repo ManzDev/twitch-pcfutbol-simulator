@@ -40,36 +40,39 @@ class PCFutbolSimulation extends HTMLElement {
         background: #2226;
         width: 100%;
         height: 100%;
+
+        overflow: hidden;
         display: flex;
+        align-items: start;
         justify-content: center;
       }
 
       .report {
         width: 65%;
         height: 100%;
+        max-height: 470px;
         background: #2226;
         padding: 1em 1.5em;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
       }
+
+      .report pcfutbol-event:nth-last-child(2) { opacity: 0.8 }
+      .report pcfutbol-event:nth-last-child(3) { opacity: 0.6 }
+      .report pcfutbol-event:nth-last-child(4) { opacity: 0.4 }
+      .report pcfutbol-event:nth-last-child(5) { opacity: 0.3 }
+      .report pcfutbol-event:nth-last-child(6) { opacity: 0.2 }
+      .report pcfutbol-event:nth-last-child(7) { opacity: 0.15 }
+      .report pcfutbol-event:nth-last-child(8) { opacity: 0.10 }
     `;
   }
 
   connectedCallback() {
     this.render();
-    const timer = this.shadowRoot.querySelector("pcfutbol-timer");
 
-    const generateRandomEvent = () => {
-      const ocurrsEvent = Math.floor(Math.random() * 10);
-
-      // 9
-    };
-
-    const increment = () => {
-      timer.incMinutes();
-      setTimeout(() => increment(), 1000);
-      generateRandomEvent();
-    };
-    setTimeout(() => increment(), 1000);
+    // START MATCH
   }
 
   render() {
@@ -81,7 +84,6 @@ class PCFutbolSimulation extends HTMLElement {
       </header>
       <div class="report-container">
         <div class="report">
-          <pcfutbol-event type="offside" user="jelitter" time="3"></pcfutbol-event>
         </div>
       </div>
     </div>`;

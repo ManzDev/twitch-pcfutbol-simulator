@@ -8,14 +8,25 @@ import redflag from "../assets/icons/redflag.svg?raw";
 
 import snarkdown from "snarkdown";
 
-const goalTemplate = (user) => {
-  const texts = [
-    `¡Ha marcado gol el usuario ${user}!`,
-    `¡Gol! ¡Gol! ¡Gol! ¡Ha marcado ${user}!`
-  ];
+const randomTemplate = (templates, user) => {
+  const random = Math.floor(Math.random() * templates.length);
+  return snarkdown(templates[random]);
+};
 
-  const random = Math.floor(Math.random() * texts.length);
-  return texts[random];
+const goalTemplate = (user) => {
+  const safeUser = user.replaceAll("_", " ");
+  const texts = [
+    `¡Ha marcado gol el usuario **${safeUser}**!`,
+    `¡Gol! ¡Gol! ¡Gooooool! ¡**${safeUser}** ha marcado!`,
+    `¡Golazo! ¡De la chistera sacó **${safeUser}** semejante pepazo!`,
+    `¡**${safeUser}** ha marcado justo en el último momento!`,
+    `¡**${safeUser}** de mi vida! ¡Gol!`,
+    `¡Gooool! ¡Gol de **${safeUser}** en toda la escuadra!`,
+    `¡El Dios del fútbol **${safeUser}**! ¡Gooooool!`,
+    `¡Descomunal golazo de cabeza de **${safeUser}**!`,
+    `¡Balón al palo y gol de remate de **${safeUser}** con la izquierda!`
+  ];
+  return randomTemplate(texts, user);
 };
 
 const ICONS = {
@@ -46,6 +57,7 @@ class PCFutbolEvent extends HTMLElement {
         background: #2225;
         box-sizing: border-box;
         padding: 0.75em;
+        margin: 0.25em 0;
       }
 
       header {
@@ -86,11 +98,40 @@ class PCFutbolEvent extends HTMLElement {
         color: #b9e40b;
       }
 
+      .shake {
+        animation: shake-horizontal 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+      }
+
       svg {
         max-width: 22px;
         max-height: 22px;
         margin-right: 10px;
       }
+
+      @keyframes shake-horizontal {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+          transform: translateX(-3px);
+        }
+        20%,
+        40%,
+        60% {
+          transform: translateX(3px);
+        }
+        80% {
+          transform: translateX(1.5px);
+        }
+        90% {
+          transform: translateX(-1.5px);
+        }
+      }
+
     `;
   }
 
@@ -100,17 +141,20 @@ class PCFutbolEvent extends HTMLElement {
     this.user = this.getAttribute("user");
     this.time = this.getAttribute("time");
     this.render();
-    const html = snarkdown(this.markdown.trim());
-    this.shadowRoot.querySelector("p").innerHTML = html;
+    setTimeout(() => this.shadowRoot.querySelector(".container").classList.remove("shake"), 1000);
+  }
+
+  getTime() {
+    return `<strong>${this.time}'</strong>`;
   }
 
   render() {
     this.shadowRoot.innerHTML = /* html */`
     <style>${PCFutbolEvent.styles}</style>
-    <div class="container">
+    <div class="container shake">
       <header>
         ${this.icon}
-        <p></p>
+        <p>${this.getTime()} ${goalTemplate(this.user)}</p>
       </header>
     </div>`;
   }

@@ -107,7 +107,6 @@ class PCFutbolTeamHeader extends HTMLElement {
   }
 
   updateAverageTeam(value) {
-    console.log("update", value);
     this.shadowRoot.querySelector("output").textContent = value;
     this.shadowRoot.querySelector(".bar").style.setProperty("--value", `${value}%`);
   }

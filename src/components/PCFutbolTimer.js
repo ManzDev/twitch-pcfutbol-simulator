@@ -44,7 +44,7 @@ class PCFutbolTimer extends HTMLElement {
           -2px 0 0 2px #0ac837 inset;
         background: #06a82c;
         background-image: linear-gradient(140deg, transparent 25%, #2fce54, transparent 75%);
-        transition: width 0.5s;
+        transition: width 1s ease-in-out;
         box-sizing: border-box;
       }
 
@@ -61,6 +61,11 @@ class PCFutbolTimer extends HTMLElement {
   setUpdate(minutes) {
     this.style.setProperty("--minutes", minutes);
     this.shadowRoot.querySelector(".time-elapsed").classList.remove("start");
+  }
+
+  get minutes() {
+    const minutes = Number(this.style.getPropertyValue("--minutes"));
+    return minutes;
   }
 
   incMinutes() {
